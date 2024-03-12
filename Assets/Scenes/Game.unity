@@ -292,6 +292,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &296568722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 296568724}
+  - component: {fileID: 296568723}
+  m_Layer: 0
+  m_Name: MeteorSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &296568723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296568722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd98ae5aee5710448e14c7ef1e4829c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &296568724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296568722}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2210534, y: 4.11424, z: -0.266483}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &302884568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,7 +1211,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814138284}
   m_CullTransparentMesh: 1
---- !u!1 &1070796960
+--- !u!1 &935087221
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1175,38 +1219,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1070796962}
-  - component: {fileID: 1070796961}
+  - component: {fileID: 935087223}
+  - component: {fileID: 935087222}
   m_Layer: 0
-  m_Name: RockSpawner
+  m_Name: ObjectPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1070796961
+--- !u!114 &935087222
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1070796960}
+  m_GameObject: {fileID: 935087221}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54af1f579135a594dab7b2a19b0c88ae, type: 3}
+  m_Script: {fileID: 11500000, guid: c772c43192533894594057281a91b0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rock: {fileID: 1475920360614144647, guid: 8f5452d5e0702e04c9f9e25aaa5cfc7e, type: 3}
---- !u!4 &1070796962
+  pools:
+  - tag: Meteor
+    prefab: {fileID: 1475920360614144647, guid: 8f5452d5e0702e04c9f9e25aaa5cfc7e, type: 3}
+    size: 5
+--- !u!4 &935087223
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1070796960}
+  m_GameObject: {fileID: 935087221}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6, z: 0}
+  m_LocalPosition: {x: 0.05, y: 5.45, z: -0.26674312}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2004,7 +2051,7 @@ GameObject:
   - component: {fileID: 1995043734}
   - component: {fileID: 1995043736}
   m_Layer: 0
-  m_Name: SectionDeleter/RockDeleter
+  m_Name: MeteorDeleter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2064,7 +2111,7 @@ Transform:
   m_GameObject: {fileID: 1995043732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -15, z: 0}
+  m_LocalPosition: {x: 0, y: -11.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2150,6 +2197,7 @@ SceneRoots:
   - {fileID: 1995043735}
   - {fileID: 1200881720}
   - {fileID: 160926700}
-  - {fileID: 1070796962}
   - {fileID: 1445991802}
   - {fileID: 598357146}
+  - {fileID: 935087223}
+  - {fileID: 296568724}

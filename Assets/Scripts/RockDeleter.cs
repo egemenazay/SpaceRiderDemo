@@ -13,10 +13,6 @@ public class RockDeleter : MonoBehaviour
             Destroy(collision.gameObject);
             Debug.Log("Meteor Detected");
         }
-        if (collision.gameObject.CompareTag("space"))
-        {
-            
-            Debug.Log("Space Detected");
-        }
+        
     }
 }

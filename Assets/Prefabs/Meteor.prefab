@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1736501393822559708}
   - component: {fileID: 1942451768191650766}
   - component: {fileID: 771724829979928440}
+  - component: {fileID: 7786177578370683409}
   m_Layer: 0
   m_Name: Meteor
   m_TagString: meteor
@@ -170,3 +171,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7786177578370683409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475920360614144647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54af1f579135a594dab7b2a19b0c88ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
