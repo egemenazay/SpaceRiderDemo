@@ -10,13 +10,6 @@ namespace Assets.Scripts
             transform.position += new Vector3(0,-4,0) * Time.deltaTime;
         }
         
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.gameObject.CompareTag("Player"))
-            {
-                transform.position = new (0, 11.12f, 0);
-            }
-        }
     }
     
 }

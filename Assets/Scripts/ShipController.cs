@@ -56,7 +56,7 @@ public class ShipController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Rock"))
+        if (other.gameObject.CompareTag("meteor"))
         {
             GameOver.Setup();
             Time.timeScale = 0;
