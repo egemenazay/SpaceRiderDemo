@@ -6,16 +6,17 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class ShipController : MonoBehaviour
 {
-    public GameOver GameOver;
+    private GameOver _gameOver;
     private Rigidbody2D rgb2d;
     float speed = 7f;
     bool pause = false;
     private float previousTimeScale;
-
+    [SerializeField] public GameObject gameOverScreen;
 
     private void Awake()
     {
         rgb2d = GetComponent<Rigidbody2D>();
+        gameOverScreen.SetActive(false);
     }
 
     private void Update()
@@ -58,7 +59,7 @@ public class ShipController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("meteor"))
         {
-            GameOver.GameOverTrue();
+            gameOverScreen.SetActive(true);
             Time.timeScale = 0;
         }
     }

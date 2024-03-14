@@ -8,8 +8,13 @@ using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
-    public void GameOverTrue()
+    [SerializeField] public GameObject gameOverScreen;
+    public void Setup()
     {
-        gameObject.SetActive(true);
+        gameOverScreen.SetActive(true);
+    }
+    public void GameOverFalse()
+    {
+        gameOverScreen.SetActive(false);
     }
 }

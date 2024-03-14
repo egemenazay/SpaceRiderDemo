@@ -6,9 +6,6 @@ using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour
 {
-    
-    
-    
     [SerializeField] public GameObject objPrefab;
     [SerializeField] public int poolSize;
 
