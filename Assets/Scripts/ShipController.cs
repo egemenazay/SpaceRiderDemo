@@ -58,7 +58,7 @@ public class ShipController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("meteor"))
         {
-            GameOver.Setup();
+            GameOver.GameOverTrue();
             Time.timeScale = 0;
         }
     }
